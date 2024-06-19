@@ -1,10 +1,5 @@
 pipeline {
   agent {
-     docker {
-            image 'maven:3-alpine' // or any other image you need
-            args '-v /var/run/docker.sock:/var/run/docker.sock' // optional: if you need to use Docker within Docker
-        }
-  }
   stages {
     stage('Checkout') {
       steps {
